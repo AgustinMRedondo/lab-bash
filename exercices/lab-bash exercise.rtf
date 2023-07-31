@@ -1,0 +1,342 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2708
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;
+\f3\fnil\fcharset0 Menlo-Bold;\f4\fnil\fcharset0 HelveticaNeue-Bold;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red224\green232\blue240;\red12\green14\blue18;
+\red255\green255\blue255;}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c90196\c92941\c95294;\cssrgb\c5098\c6667\c9020;
+\csgray\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh15260\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf2 \CocoaLigature0 1. 
+\f1 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 Using the echo command print in console "Hello World". Here is some info about echo command
+\f0 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+(base) agustinredondoarena@MacBook-Air labs % echo "Hello World"\
+Hello World\
+\
+2. 
+\f1 \cf3 \cb4 \CocoaLigature1 	\expnd0\expndtw0\kerning0
+Create a new directory called\'a0
+\f2 new_dir
+\f1 .
+\f0 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+(base) agustinredondoarena@MacBook-Air ~ % cd Desktop\
+(base) agustinredondoarena@MacBook-Air Desktop % cd Ironhack \
+(base) agustinredondoarena@MacBook-Air Ironhack % cd lab-bash\
+cd: no such file or directory: lab-bash\
+(base) agustinredondoarena@MacBook-Air Ironhack % cd lab-bash\
+cd: no such file or directory: lab-bash\
+(base) agustinredondoarena@MacBook-Air Ironhack % cd lab\
+cd: no such file or directory: lab\
+(base) agustinredondoarena@MacBook-Air Ironhack % cd labs\
+(base) agustinredondoarena@MacBook-Air labs % mkdir new_dir
+\f1 \cf3 \cb4 \CocoaLigature1 \
+\
+3. 	1	\expnd0\expndtw0\kerning0
+Delete/Remove the directory\'a0
+\f2 new_dir
+\f1 .
+\f0 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+(base) agustinredondoarena@MacBook-Air labs % rm new_dir\
+rm: new_dir: is a directory\
+(base) agustinredondoarena@MacBook-Air labs % rm - f new_dir\
+rm: -: No such file or directory\
+rm: f: No such file or directory\
+rm: new_dir: is a directory\
+(base) agustinredondoarena@MacBook-Air labs % rm - r new_dir\
+rm: -: No such file or directory\
+rm: r: No such file or directory\
+rm: new_dir: is a directory\
+(base) agustinredondoarena@MacBook-Air labs % rm -r new_dir\
+(base) agustinredondoarena@MacBook-Air labs % cd lab-bash\
+(base) agustinredondoarena@MacBook-Air lab-bash % mkdir new_dir\
+(base) agustinredondoarena@MacBook-Air lab-bash % rm -r new_dir\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1 \cf3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+4. \cf3 \cb4 \kerning1\expnd0\expndtw0 	1	\expnd0\expndtw0\kerning0
+Copy the file\'a0
+\f2 sed.txt
+\f1 \'a0from the\'a0
+\f2 lorem
+\f1 \'a0folder and paste it to the folder\'a0
+\f2 lorem-copy
+\f1 \'a0folder.
+\f0 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+(base) agustinredondoarena@MacBook-Air lab-bash % cd lorem\
+(base) agustinredondoarena@MacBook-Air lorem % pbcopy < sed.txt\
+(base) agustinredondoarena@MacBook-Air lorem % cd -\
+~/Desktop/Ironhack/labs/lab-bash\
+(base) agustinredondoarena@MacBook-Air lab-bash % cd lorem-copy\
+(base) agustinredondoarena@MacBook-Air lorem-copy % pbpaste > sed.txt      
+\f1 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\
+5. \kerning1\expnd0\expndtw0 	1	\expnd0\expndtw0\kerning0
+Copy the other two files from the\'a0
+\f2 lorem folder
+\f1 \'a0to\'a0
+\f2 lorem-copy
+\f1 \'a0folder in just one line using semicolon\'a0
+\f2 ;
+\f1 .
+\f0 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+(base) agustinredondoarena@MacBook-Air lorem-copy % cp lorem/\{at.txt,sed.txt\} lorem-copy/\
+cp: lorem-copy is not a directory\
+(base) agustinredondoarena@MacBook-Air lorem-copy % -cd\
+zsh: command not found: -cd\
+(base) agustinredondoarena@MacBook-Air lorem-copy % cd -\
+~/Desktop/Ironhack/labs/lab-bash\
+(base) agustinredondoarena@MacBook-Air lab-bash % cp lorem/\{at.txt,sed.txt\} lorem-copy/\
+(base) agustinredondoarena@MacBook-Air lab-bash % cp lorem/\{at.txt,lorem.txt\} lorem-copy/\
+(base) agustinredondoarena@MacBook-Air lab-bash %  cp lorem/\{at.txt;lorem.txt\} lorem-copy/\
+zsh: parse error near `\}'\
+\
+6. 
+\f1 \cf3 \cb4 \CocoaLigature1 	1	\expnd0\expndtw0\kerning0
+Show the\'a0
+\f2 sed.txt
+\f1 \'a0file content from the\'a0
+\f2 lorem
+\f1 \'a0folder.
+\f0 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+(base) agustinredondoarena@MacBook-Air lab-bash % cd lorem\
+(base) agustinredondoarena@MacBook-Air lorem % open ~/sed.txt    \
+The file /Users/agustinredondoarena/sed.txt does not exist.\
+(base) agustinredondoarena@MacBook-Air lorem % open ~/sed.txt\
+The file /Users/agustinredondoarena/sed.txt does not exist.\
+(base) agustinredondoarena@MacBook-Air lorem % cat /sed.txt\
+cat: /sed.txt: No such file or directory\
+(base) agustinredondoarena@MacBook-Air lorem % cat/lorem/sed.txt\
+zsh: no such file or directory: cat/lorem/sed.txt\
+(base) agustinredondoarena@MacBook-Air lorem % cat sed.txt               \
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, \
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. \
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, \
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. \
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, \
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. \
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, \
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, \
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus\
+\
+7. 
+\f1 \cf3 \cb4 \CocoaLigature1 	1	\expnd0\expndtw0\kerning0
+Show the\'a0
+\f2 at.txt
+\f1 \'a0file and\'a0
+\f2 lorem.txt
+\f1 \'a0file contents from\'a0
+\f2 lorem
+\f1 \'a0folder.
+\f0 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+(base) agustinredondoarena@MacBook-Air lorem % cat at.txt ; cat lorem.txt\
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum \
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non \
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga. \
+Et harum quidem rerum facilis est ET expedita distinctio. \
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod \
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. \
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET \
+ut ET voluptates repudiandae sint ET molestiae non recusandae. \
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores \
+alias consequatur aut perferendis doloribus asperiores repellat\
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\f3\b \cf5 \cb2 %
+\f0\b0 \cf2 \cb1     \
+\
+
+\f1 \cf3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 8. \cf3 \cb4 \kerning1\expnd0\expndtw0 	1	\expnd0\expndtw0\kerning0
+Print the first 3 rows in\'a0
+\f2 sed.txt
+\f1 \'a0file from lorem-copy folder.
+\f0 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+((base) agustinredondoarena@MacBook-Air lorem % cd -\
+~/Desktop/Ironhack/labs/lab-bash\
+(base) agustinredondoarena@MacBook-Air lab-bash % cd lorem-copy\
+(base) agustinredondoarena@MacBook-Air lorem-copy % head -n 3 /sed.txt\
+head: /sed.txt: No such file or directory\
+(base) agustinredondoarena@MacBook-Air lorem-copy % head -n e sed.txt\
+head: illegal line count -- e\
+(base) agustinredondoarena@MacBook-Air lorem-copy % heas -n 3 sed.txt\
+zsh: command not found: heas\
+(base) agustinredondoarena@MacBook-Air lorem-copy % head -n 3 sed.txt\
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, \
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. \
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+\f1 \cf3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\
+9. \cf3 \cb4 \kerning1\expnd0\expndtw0 	1	\expnd0\expndtw0\kerning0
+Print the last 3 rows in\'a0
+\f2 sed.txt
+\f1 \'a0file from lorem-copy folder.
+\f0 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+(base) agustinredondoarena@MacBook-Air lorem-copy % tail -n 3 sed.txt\
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, \
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, \
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus\
+\
+10. 
+\f1 \cf3 \cb4 \CocoaLigature1 	1	\expnd0\expndtw0\kerning0
+Add\'a0
+\f2 Homo homini lupus.
+\f1 \'a0at the end of\'a0
+\f2 sed.txt
+\f1 \'a0file in the\'a0
+\f2 lorem-copy
+\f1 \'a0folder.
+\f0 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+(base) agustinredondoarena@MacBook-Air lorem-copy % echo "Homo homini lupus." >> sed.txt  
+\f1 \cf3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\
+11. \cf3 \cb4 \kerning1\expnd0\expndtw0 	1	\expnd0\expndtw0\kerning0
+Print the last 3 rows in\'a0
+\f2 sed.txt
+\f1 \'a0file from\'a0
+\f2 lorem-copy
+\f1 \'a0folder. You should see\'a0
+\f2 Homo homini lupus.
+\f1 .
+\f0 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+(base) agustinredondoarena@MacBook-Air lorem-copy % tail -n 3 sed.txt \
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, \
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus\
+Homo homini lupus.\
+\
+12. 
+\f2 \cf3 \cb4 \CocoaLigature1 	1	\expnd0\expndtw0\kerning0
+sed
+\f1 \'a0command is used to replace the text in a file. Use the\'a0
+\f2 sed
+\f1 \'a0command to replace all occurances of\'a0
+\f2 et
+\f1 \'a0with\'a0
+\f2 ET
+\f1 \'a0in the file\'a0
+\f2 at.txt
+\f1 \'a0file present in the folder\'a0
+\f2 lorem
+\f1 . You can use the following link to refer to\'a0
+\f2 sed
+\f1 \'a0commands [{\field{\*\fldinst{HYPERLINK "https://www.linode.com/docs/guides/manipulate-text-from-the-command-line-with-sed/"}}{\fldrslt https://www.linode.com/docs/guides/manipulate-text-from-the-command-line-with-sed/}}] Check the contents of the sed.txt file using\'a0
+\f2 cat
+\f1 \'a0command.
+\f0 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+(base) agustinredondoarena@MacBook-Air lorem % sed -i '' 's/\\bet\\b/ET/g' at.txt   \
+(base) agustinredondoarena@MacBook-Air lorem % cat at.txt\
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum \
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non \
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga. \
+Et harum quidem rerum facilis est ET expedita distinctio. \
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod \
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. \
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET \
+ut ET voluptates repudiandae sint ET molestiae non recusandae. \
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores \
+alias consequatur aut perferendis doloribus asperiores repellat
+\f1 \cf3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\
+13. \cf3 \cb4 \kerning1\expnd0\expndtw0 	1	\expnd0\expndtw0\kerning0
+Find who is the system user.\cf3 \cb1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf2 \kerning1\expnd0\expndtw0 \CocoaLigature0 (base) agustinredondoarena@MacBook-Air lorem % whoami\
+agustinredondoarena\
+\
+14.
+\f1 \cf3 \cb4 \CocoaLigature1 	1	\expnd0\expndtw0\kerning0
+Find the current path of the directory you are in.
+\f0 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+(base) agustinredondoarena@MacBook-Air lorem % pwd\
+/Users/agustinredondoarena/Desktop/Ironhack/labs/lab-bash/lorem\
+\
+15.
+\f1 \cf3 \cb4 \CocoaLigature1 	1	\expnd0\expndtw0\kerning0
+List all files with the extension\'a0
+\f2 .txt
+\f1 \'a0in lorem folder.
+\f0 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+(base) agustinredondoarena@MacBook-Air lorem % ls -l | grep '\\.txt$'\
+-rwxr-xr-x  1 agustinredondoarena  staff  853 31 jul 13:38 at.txt\
+-rwxr-xr-x  1 agustinredondoarena  staff  448 31 jul 11:51 lorem.txt\
+-rwxr-xr-x@ 1 agustinredondoarena  staff  891 31 jul 11:51 sed.txt
+\f1 \cf3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+
+\f0 \cf2 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+16. 
+\f1 \cf3 \cb4 \CocoaLigature1 	1	\expnd0\expndtw0\kerning0
+Count the rows in\'a0
+\f2 sed.txt
+\f1 \'a0file from lorem folder. Look concatenate\'a0
+\f2 cat
+\f1 \'a0and\'a0
+\f2 wc
+\f1 \'a0with the pipe\'a0
+\f2 |
+\f1 .\cf3 \cb1 \
+
+\f0 \cf2 \kerning1\expnd0\expndtw0 \CocoaLigature0 (base) agustinredondoarena@MacBook-Air lorem % cat sed.txt | wc -w\
+     131\
+
+\f1 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+17. \kerning1\expnd0\expndtw0 	1	\expnd0\expndtw0\kerning0
+Count the\'a0
+\f4\b files
+\f1\b0 \'a0which start with\'a0
+\f2 lorem
+\f1 \'a0in all directories.\
+
+\f0 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 (base) agustinredondoarena@MacBook-Air lab-bash % find . -type f -name "*lorem*" | wc -l\
+       2
+\f1 \cf3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+20. \cf3 \cb4 \kerning1\expnd0\expndtw0 	20	\expnd0\expndtw0\kerning0
+Store your\'a0
+\f2 name
+\f1 \'a0in a variable with\'a0
+\f2 read
+\f1 \'a0command.\cf3 \cb1 \
+
+\f0 \cf2 \kerning1\expnd0\expndtw0 \CocoaLigature0 (base) agustinredondoarena@MacBook-Air lab-bash % echo -n "Please enter a value: "\
+read my_variable\
+Please enter a value: Agustin
+\f1 \cf3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\
+21. \cf3 \cb4 \kerning1\expnd0\expndtw0 	20	\expnd0\expndtw0\kerning0
+Print that variable.
+\f0 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+(base) agustinredondoarena@MacBook-Air lab-bash % echo "My name is $my_variable"\
+My name is Agustin\
+\
+22.
+\f1 \cf3 \cb4 \CocoaLigature1 	20	\expnd0\expndtw0\kerning0
+Create a new directory named with variable\'a0
+\f2 name
+\f1 .
+\f0 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+(base) agustinredondoarena@MacBook-Air lab-bash % mkdir "$my_variable"\
+(base) agustinredondoarena@MacBook-Air lab-bash % 
+\f1 \cf3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\
+23. \cf3 \cb4 \kerning1\expnd0\expndtw0 	20	\expnd0\expndtw0\kerning0
+Remove that directory.\cf3 \cb1 \
+
+\f0 \cf2 \kerning1\expnd0\expndtw0 \CocoaLigature0 (base) agustinredondoarena@MacBook-Air lab-bash % rm -r Agustin
+\fs36 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs22 \
+}
